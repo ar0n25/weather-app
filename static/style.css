@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=JetBrains+Mono:wght@500&family=Work+Sans:wght@400;500&display=swap');
+
+:root {
+  --sky-top: #3f6fb0;
+  --sky-horizon: #8fc4e8;
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --ink: #16233a;
+  --ink-soft: #52657e;
+  --accent: #e0703f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-horizon) 100%);
+}
+
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  width: 340px;
+  box-shadow: 0 20px 50px rgba(22, 35, 58, 0.25);
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.search {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search input {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid rgba(22, 35, 58, 0.15);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.95rem;
+  color: var(--ink);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(224, 112, 63, 0.15);
+}
+
+.search input::placeholder {
+  color: var(--ink-soft);
+}
+
+.search button {
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--ink);
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.search button:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.search button:active {
+  transform: translateY(0);
+}
+
+.result {
+  text-align: center;
+  color: var(--ink);
+}
+
+.result p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.result p:first-child {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.temp {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.error {
+  color: #b03a2e;
+  font-weight: 500;
+}
