@@ -3,7 +3,7 @@
 A simple weather lookup app built with Flask and vanilla JavaScript, consuming the OpenWeatherMap API.
 
 ## Live demo
-https://your-app-name.onrender.com
+https://aron-armas-weather-app.onrender.com
 
 ## Features
 - Search current weather by city name
